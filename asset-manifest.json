@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/frimppa/SurveyJS/static/css/main.fe8e9e09.chunk.css",
+    "main.js": "/frimppa/SurveyJS/static/js/main.19048fe7.chunk.js",
+    "main.js.map": "/frimppa/SurveyJS/static/js/main.19048fe7.chunk.js.map",
+    "runtime-main.js": "/frimppa/SurveyJS/static/js/runtime-main.15fcb31b.js",
+    "runtime-main.js.map": "/frimppa/SurveyJS/static/js/runtime-main.15fcb31b.js.map",
+    "static/js/2.be97367d.chunk.js": "/frimppa/SurveyJS/static/js/2.be97367d.chunk.js",
+    "static/js/2.be97367d.chunk.js.map": "/frimppa/SurveyJS/static/js/2.be97367d.chunk.js.map",
+    "static/js/3.d9449c63.chunk.js": "/frimppa/SurveyJS/static/js/3.d9449c63.chunk.js",
+    "static/js/3.d9449c63.chunk.js.map": "/frimppa/SurveyJS/static/js/3.d9449c63.chunk.js.map",
+    "index.html": "/frimppa/SurveyJS/index.html",
+    "static/css/main.fe8e9e09.chunk.css.map": "/frimppa/SurveyJS/static/css/main.fe8e9e09.chunk.css.map",
+    "static/js/2.be97367d.chunk.js.LICENSE.txt": "/frimppa/SurveyJS/static/js/2.be97367d.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/frimppa/SurveyJS/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.15fcb31b.js",
+    "static/js/2.be97367d.chunk.js",
+    "static/css/main.fe8e9e09.chunk.css",
+    "static/js/main.19048fe7.chunk.js"
+  ]
+}
