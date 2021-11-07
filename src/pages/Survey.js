@@ -1,14 +1,12 @@
 import React from "react";
-import react from React;
+import StandardForm from "../common/components/SurveyJS/StandardForm";
+import ButtonAppBar from "../common/components/MaterialUI/AppBar";
 
-class Survey extends React.Component {
-    render(){
-        return(
-            <div></div>
-        )
-    }
-}
+const Survey = (props) => (
+  <div>
+    <ButtonAppBar />
+    <StandardForm />
+  </div>
+);
 
-ReactDOM.render(
-    <Survey />
-)
+export default Survey;
