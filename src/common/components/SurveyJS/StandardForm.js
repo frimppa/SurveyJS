@@ -1,6 +1,7 @@
 import React from 'react';
 import * as Survey from "survey-react";
 import "survey-react/survey.css";
+import axios from 'axios';
 
 const StandardForm = props => {
   const surveyJSON = {
@@ -62,10 +63,29 @@ const StandardForm = props => {
     ],
     "showQuestionNumbers": "off"
 };
-  const model = new Survey.Model(surveyJSON);
+  const survey = new Survey.Model(surveyJSON);
+
+    
+/*  Survey.Survey.onComplete.add(function (sender, options) {
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "http://localhost:4000/surveyData");
+    xhr.setRequestHeader("Content-Type", "application/json; charset=utf-8");
+    xhr.send(JSON.stringify(sender.data));
+});*/
+
+
+    survey.onComplete.add(function (sender, options) {
+        //Show message about "Saving..." the results
+        options.showDataSaving();//you may pass a text parameter to show your own text
+        axios.post('http://localhost:4000/surveyData', sender.data)
+        .then(res => {
+            console.log(res);
+            console.log(res.data);
+          })
+    });
 
   return(
-    <div><Survey.Survey json={surveyJSON}/></div>
+    <Survey.Survey model={survey}/>
   )
 }
 
