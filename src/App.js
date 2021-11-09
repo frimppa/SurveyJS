@@ -1,12 +1,22 @@
 import logo from './logo.svg';
 import './App.css';
-import Survey from './pages/Survey'
+import Main from './pages/Main'
+import Survey from './pages/Surveys'
+
+import {
+  BrowserRouter,
+  Routes,
+  Route
+} from "react-router-dom";
 
 const App = props => {
   return (
-    <div className="App">      
-        <Survey/>
-    </div>
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Main />} />
+      <Route path="survey" element={<Survey />} />
+    </Routes>
+  </BrowserRouter>
   );
 }
 
