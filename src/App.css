@@ -28,6 +28,35 @@
   color: #61dafb;
 }
 
+.sv_qstn .sq-root {
+  border: 1px solid gray;
+  border-left: 4px solid #18a689;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.addButton {
+  padding-left: 2%;
+  padding-top: 2%;
+}
+
+.flexContainer {
+  display: flex;
+  justify-content: center;
+  column-gap: 100px;
+  row-gap: 100px;
+}
+.flexColumn {
+  flex-direction: column;
+}
+.flexStart {
+  justify-content: flex-start;
+}
+.flexCenter {
+  justify-content: center;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
