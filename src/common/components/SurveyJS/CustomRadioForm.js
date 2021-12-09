@@ -3,9 +3,26 @@ import * as Survey from "survey-react";
 import "survey-react/survey.css";
 import "./surveyCustom.css"
 import axios from "axios";
+import { Rating } from "@mui/material";
+
+
 
 const CustomRadioForm = (props) => {
-  Survey.StylesManager.applyTheme("modern");
+  //Survey.StylesManager.applyTheme("modern");
+  var defaultThemeColors = Survey
+    .StylesManager
+    .ThemeColors["modern"];
+defaultThemeColors["$main-color"] = "#201751";
+defaultThemeColors["$main-hover-color"] = "#201751";
+defaultThemeColors["$text-color"] = "#201751";
+defaultThemeColors["$header-color"] = "#201751";
+
+defaultThemeColors["$header-background-color"] = "#201751";
+defaultThemeColors["$body-container-background-color"] = "#201751";
+
+Survey.StylesManager.applyTheme("modern");
+
+
   const surveyJSON = {
     title: "Testikysely",
     description:
@@ -13,53 +30,75 @@ const CustomRadioForm = (props) => {
     pages: [
       {
         name: "page1",
+        title: "Ajattele tulevaa työuraasi valmistumisesi jälkeen, kuinka hyvin seuraavat asiat kuvaavat omia toiveitasi ja suunnitelmiasi.",
+        questions: [
+          {
+            type: "rating",
+            name: "satisfaction1",
+            title: "1.	Kuinka todennäköistä on, että jatkat uraasi toisen palveluksessa (eli palkkatyössä) valmistumisesi jälkeen??",
+            minRateDescription: "erittäin epätodennäköistä",
+            maxRateDescription: "erittäin todennäköistä",
+            isRequired: true,
+          },
+          {
+            type: "rating",
+            name: "satisfaction2",
+            title: "2.	Kuinka todennäköistä on, että tulet perustamaan oman yrityksen valmistumisesi jälkeen (tai opintojesi aikana)?",
+            minRateDescription: "erittäin epätodennäköistä",
+            maxRateDescription: "erittäin todennäköistä",
+            isRequired: true,
+          },
+          {
+            type: "rating",
+            name: "satisfaction3",
+            title: "3. Uskon, että läheisimmät perheenjäseneni ajattelevat, että minun 1 ei pitäisi … 7 pitäisi tavoitella oman yrityksen perustamista ja yrittäjänä toimimista valmistumiseni jälkeen.",
+            minRateDescription: "ei pitäisi",
+            maxRateDescription: "pitäisi",
+            isRequired: true,
+          },
+          {
+            type: "rating",
+            name: "satisfaction4",
+            title: "4. Kuinka paljon välität siitä, mitä läheisimmät perheenjäsenesi ajattelevat, jos tavoittelet oman yrityksen perustamista ja yrittäjänä toimimista valmistumisesi jälkeen?",
+            minRateDescription: "en lainkaan",
+            maxRateDescription: "todella paljon",
+            isRequired: true,
+          },
+        ],
+      },
+      {
+        name: "page2",
 
         questions: [
           {
-            type: "matrix",
+            type: "matrixdropdown",
             name: "KysymysRyhmä1",
             title:
               "Ilmoita, oletko samaa vai eri mieltä seuraavista väitteistä",
+              confirmDelete: false,
             columns: [
               {
                 value: 1,
                 text: "Vahvasti eri mieltä",
+                cellType: "rating",
+                name: "rating1",
+                title: "jotain",
+                minRateDescription: "erittäin epätodennäköistä",
+                maxRateDescription: "erittäin todennäköistä",
+                confirmDelete: false,
               },
-              {
-                value: 2,
-                text: "eri mieltä",
-              },
-              {
-                value: 3,
-                text: "Neutraali",
-              },
-              {
-                value: 4,
-                text: "Samaa mieltä",
-              },
-              {
-                value: 5,
-                text: "Vahvasti samaa mieltä",
-              },
+             
             ],
             rows: [
-              {
-                value: "Tuote edullinen",
-                text: "Tuote on edullinen",
-              },
-              {
-                value: "Tekee mitä lupaakin",
-                text: "Tuote tekee mitä on luvattu",
-              },
-              {
-                value: "parempi kuin muut",
-                text: "Tuote on parempi kuin muut markkoilla olevat tuotteet",
-              },
-              {
-                value: "helppokäyttöisyys",
-                text: "Tuote on helppokäyttöinen",
-              },
-            ],
+              "Excited lijflisdhflöis slmdfhsldhf slmifdhlsh sdhmf lshdf msfdhlmsdhfoshdfml sdlfhimskdjhf",
+              "Enthusiastic",
+              "Open",
+              "Physically safe",
+              "Emotionally safe",
+              "Apprehensive",
+              "Nervous",
+              "Scared"
+          ]
           },
           {
             type: "matrix",
@@ -111,7 +150,7 @@ const CustomRadioForm = (props) => {
         ],
       },
       {
-        name: "page2",
+        name: "page3",
 
         questions: [
           {
