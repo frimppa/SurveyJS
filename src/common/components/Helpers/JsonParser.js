@@ -5,12 +5,16 @@ import CustomRadioForm from "../common/components/SurveyJS/CustomRadioForm";
 import ButtonAppBar from "../common/components/MaterialUI/AppBar";
 import BasicRating from "../common/components/MaterialUI/Rating";
 
-const Main = (props) => (
-  <div>
+const JsonParser = (props) => {
+
+    console.log("Jsonlog", props);
+
+  return(<div>
     <ButtonAppBar />
     {/*<CustomRadioForm />*/}
     <BasicRating/>
   </div>
 );
+}
 
-export default Main;
+export default JsonParser;

@@ -1,0 +1,49 @@
+{
+  "title": "Testikysely",
+  "description": "jotain description tekstiä tänne",
+  "pages": [
+    {
+      "name": "page1",
+      "groups":
+      [
+      {
+      "title": "Ajattele tulevaa työuraasi valmistumisesi jälkeen, kuinka hyvin seuraavat asiat kuvaavat omia toiveitasi ja suunnitelmiasi.",
+      "questions": [
+        {
+          "type": "rating",
+          "name": "satisfaction1",
+          "title": "1. Kuinka todennäköistä on, että jatkat uraasi toisen palveluksessa (eli palkkatyössä) valmistumisesi jälkeen??",
+          "minRateDescription": "erittäin epätodennäköistä",
+          "maxRateDescription": "erittäin todennäköistä",
+          "isRequired": true
+        },
+        {
+          "type": "rating",
+          "name": "satisfaction2",
+          "title": "2. Kuinka todennäköistä on, että tulet perustamaan oman yrityksen valmistumisesi jälkeen (tai opintojesi aikana)?",
+          "minRateDescription": "erittäin epätodennäköistä",
+          "maxRateDescription": "erittäin todennäköistä",
+          "isRequired": true
+        },
+        {
+          "type": "rating",
+          "name": "satisfaction3",
+          "title": "3. Uskon, että läheisimmät perheenjäseneni ajattelevat, että minun 1 ei pitäisi … 7 pitäisi tavoitella oman yrityksen perustamista ja yrittäjänä toimimista valmistumiseni jälkeen.",
+          "minRateDescription": "ei pitäisi",
+          "maxRateDescription": "pitäisi",
+          "isRequired": true
+        },
+        {
+          "type": "rating",
+          "name": "satisfaction4",
+          "title": "4. Kuinka paljon välität siitä, mitä läheisimmät perheenjäsenesi ajattelevat, jos tavoittelet oman yrityksen perustamista ja yrittäjänä toimimista valmistumisesi jälkeen?",
+          "minRateDescription": "en lainkaan",
+          "maxRateDescription": "todella paljon",
+          "isRequired": true
+        }
+      ]
+    }
+    ]
+    }
+]
+}
