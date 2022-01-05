@@ -11,6 +11,8 @@ import MuiGrid from "@mui/material/Grid";
 import { styled } from "@mui/material/styles";
 import TestSurvey from "../TestSurvey.json";
 import Button from '@mui/material/Button';
+import Circle from '@mui/icons-material/Circle';
+import CircleOutlined from '@mui/icons-material/CircleOutlined';
 import { SettingsInputAntennaTwoTone } from "@mui/icons-material";
 //import JsonParser from "../Helpers/JsonParser";
 
@@ -36,6 +38,15 @@ export default function BasicRating() {
       margin: theme.spacing(0, 2),
     },
   }));
+
+  const StyledRating = styled(Rating)({
+   /* '& .MuiRating-iconFilled': {
+      color: '#201751',
+    },
+    '& .MuiRating-iconHover': {
+      color: '#201751',
+    },*/
+  });
 
   const handleClick = () => {
     console.log("öajdöajsd")
@@ -79,7 +90,9 @@ export default function BasicRating() {
                               style={{ display: "flex", justifyContent: "space-evenly", alignItems: "center" }}
                             >
                               <h4 style={{width:"20%"}}>{questionItem.minRateDescription}</h4>
-                              <Rating
+                              <StyledRating
+                                icon={<Circle fontSize="inherit" />}
+                                emptyIcon={<CircleOutlined fontSize="inherit" />}
                                 name={`arvostelu${questionIndex}`}
                                 //value={typeof(value[groupItem.groupID][`arvostelu${questionIndex}`]) !== undefined ? value[groupItem.groupID][`arvostelu${questionIndex}`] : 0 }
                                 value={(groupItem.groupID in value) ? value[groupItem.groupID][`arvostelu${questionIndex}`] : 0 }
