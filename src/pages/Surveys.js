@@ -2,7 +2,7 @@ import React from "react";
 import StandardForm from "../common/components/SurveyJS/StandardForm";
 import AdvancedForm from "../common/components/SurveyJS/AdvancedForm";
 import CustomRadioForm from "../common/components/SurveyJS/CustomRadioForm";
-import ButtonAppBar from "../common/components/MaterialUI/AppBar";
+import ButtonAppBar from "../common/components/MaterialUI/components/AppBar";
 import AddIcon from "@mui/icons-material/Add";
 import Fab from "@mui/material/Fab";
 import "../App.css";
@@ -19,7 +19,7 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
-import NewReviewSurvey from "../common/components/MaterialUI/NewReviewSurvey";
+import NewReviewSurvey from "../common/components/MaterialUI/components/NewReviewSurvey";
 
 
 const Survey = (props) => {
