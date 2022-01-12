@@ -3,7 +3,7 @@ import * as Survey from "survey-react";
 import "survey-react/survey.css";
 import axios from 'axios';
 
-const StandardForm = props => {
+const StandardForm = () => {
   const surveyJSON = {
     "completedHtml": "<h3>Thank you for your feedback.</h3> <h5>Your thoughts and ideas will help us to create a great product!</h5>",
     "completedHtmlOnCondition": [

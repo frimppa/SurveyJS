@@ -9,11 +9,10 @@ const useFetchData = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-          console.log("hook launched...")
         const { data: response } = await axios.get('http://localhost:8080/get/test/');
         setTestSurvey(response);
       } catch (error) {
-        console.error(error)
+        console.error("hookError: ",error)
       }
       setLoading(false);
     };

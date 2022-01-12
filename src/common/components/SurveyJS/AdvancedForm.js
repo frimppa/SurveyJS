@@ -3,7 +3,7 @@ import * as Survey from "survey-react";
 import "survey-react/survey.css";
 import axios from 'axios';
 
-const AdvancedForm = props => {
+const AdvancedForm = () => {
     var surveyJSON = {
         "title": "Minimum data reporting form – for suspected and probable cases of COVID-19",
         "pages": [

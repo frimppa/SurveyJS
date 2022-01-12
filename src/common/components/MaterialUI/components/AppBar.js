@@ -8,7 +8,7 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
-import { Link, Outletk, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function ButtonAppBar() {
   const [anchorEl, setAnchorEl] = React.useState(null);

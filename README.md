@@ -1,3 +1,9 @@
+# Frontend side for the EntreIntentio Web application. Coded with React with hooks. Material UI is used for UI elements and some components are made alternatively with Survey.js.
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

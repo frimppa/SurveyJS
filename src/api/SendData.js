@@ -1,6 +1,6 @@
-import { useEffect, useState} from 'react';
+import { useState } from 'react';
 import axios from 'axios';
-import BasicRating from '../components/Rating';
+import BasicRating from '../common/components/MaterialUI/components/Rating';
 
 const SendData = () => {
   //const [TestSurvey, setTestSurvey] = useState({});
